@@ -88,7 +88,7 @@ while 1:
     print("in mentions:\n")
     for comment in reddit.inbox.unread(mark_read=1, limit=None):
         author = comment.author
-        if bool(1) and comment.body != "[deleted]":
+        if comment.body != "[deleted]":
             print("in subreddit r/", comment.subreddit)
             print("by u/", author.name)
             print("comment body:\n ", comment.body)
