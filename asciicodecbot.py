@@ -68,9 +68,7 @@ def parseBin(binstr=""):
                         index += charno + 1  # shift index right by bit number
                         break
                     if charno == 7:
-                        # code
-                        if noData:
-                            startInd = index
+                        startInd = index
                         noData = False
                         break
 
