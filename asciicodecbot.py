@@ -77,7 +77,6 @@ def parseBin(binstr=""):
                         noData = bool(0)
 
             else:  # only if remaining chars cannot form byte
-                index = len(binstr) - 1
                 break
     if noData:
         return -1
