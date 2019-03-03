@@ -94,7 +94,6 @@ while 1:
             print("comment body:\n ", comment.body)
             print("\n")
             if comment.id not in posts_replied_to and "asciicodecbot" not in author.name:
-                # print("not yet replied to")
                 if re.search("u/asciicodecbot info", comment.body, re.IGNORECASE) and comment.id not in cache:
                     comment.reply('You\'ve mentioned ASCIICodecBot!\n\nHere are your options for using my services:\n\n'
                                   '   "u/asciicodecbot info": Display list of functions offered.\n'
