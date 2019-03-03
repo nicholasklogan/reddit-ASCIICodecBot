@@ -93,8 +93,6 @@ while 1:
             print("by u/", author.name)
             print("comment body:\n ", comment.body)
             print("\n")
-        # print("made it past bool")
-        if comment.body != "[deleted]":
             if comment.id not in posts_replied_to and "asciicodecbot" not in author.name:
                 # print("not yet replied to")
                 if re.search("u/asciicodecbot info", comment.body, re.IGNORECASE) and comment.id not in cache:
