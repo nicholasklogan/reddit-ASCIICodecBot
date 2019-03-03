@@ -55,7 +55,7 @@ def btos(binstr='', startInd=0):
 
 def parseBin(binstr=""):
     index = 0
-    noData = bool(1)
+    noData = True
     startInd = 0
     while index < len(binstr):
         if not noData:
