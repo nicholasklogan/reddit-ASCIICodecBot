@@ -58,8 +58,6 @@ def parseBin(binstr=""):
     noData = True
     startInd = 0
     while index < len(binstr):
-        if not noData:
-            break
         if not (binstr[index + 0] == '0' or binstr[index + 0] == '1'):  # if neither 1 nor 0
             index += 1
         else:  # if yes 1 or 0
@@ -71,10 +69,10 @@ def parseBin(binstr=""):
                         break
                     if charno == 7:
                         # code
-
                         if noData:
                             startInd = index
-                        noData = bool(0)
+                        noData = False
+                        break
 
             else:  # only if remaining chars cannot form byte
                 break
