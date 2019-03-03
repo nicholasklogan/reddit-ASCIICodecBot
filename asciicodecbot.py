@@ -84,7 +84,7 @@ def parseBin(binstr=""):
         return startInd
 
 
-while 1 == 1:
+while 1:
     print("in mentions:\n")
     for comment in reddit.inbox.unread(mark_read=1, limit=None):
         author = comment.author
