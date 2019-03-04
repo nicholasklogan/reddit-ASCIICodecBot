@@ -43,8 +43,6 @@ def btos(binstr='', startInd=0):
 
         output_str += chr(int(num))
         index += 8
-        if not index < len(binstr):
-            break
         if binstr[index] == ' ':
             index += 1
 
