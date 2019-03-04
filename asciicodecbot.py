@@ -40,7 +40,7 @@ def btos(binstr='', startInd=0):
     index = startInd
     while index < len(binstr):
         num = 0
-        for bitno in range(0, 8):
+        for bitno in range(8):
             num += (128 / 2 ** bitno) * (ord(binstr[index + bitno]) - 48)
 
         str += chr(int(num))
@@ -62,7 +62,7 @@ def parseBin(binstr=""):
             index += 1
         else:  # if yes 1 or 0
             if len(binstr) - index >= 8:  # if remaining chars can form a byte
-                for charno in range(0, 8):
+                for charno in range(8):
                     if not (binstr[index + charno] == '0' or binstr[
                         index + charno] == '1'):  # if neither 0 nor 1, for each char
                         index += charno + 1  # shift index right by bit number
