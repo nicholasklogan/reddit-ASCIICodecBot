@@ -41,7 +41,7 @@ def btos(binstr='', startInd=0):
     while index < len(binstr):
         num = 0
         for bitno in range(0, 8):
-            num += (128 / 2 ** bitno) * (ord(binstr[index + bitno]) - 48);
+            num += (128 / 2 ** bitno) * (ord(binstr[index + bitno]) - 48)
 
         str += chr(int(num))
         index += 8
@@ -98,7 +98,7 @@ while 1:
                                   '   "u/asciicodecbot decode this: [some_string]": Decodes ascii characters from binary numbers following "this:"\n'
                                   '   "u/asciicodecbot encode this: [some_string]": Encodes ascii characters from parent comment into binary.\n\n"'
                                   '**NOTE:** So far, only the "encode" and "decode" functions are working. We\'re working on implementing the other features!\n'
-                                  'asciicodecbot ver. 0.3');
+                                  'asciicodecbot ver. 0.3')
                     cache += comment.id
                     posts_replied_to.append(comment.id)
                     print("reply sent: info message.")
