@@ -33,7 +33,7 @@ def stob(str=''):
 
 
 def btos(binstr='', startInd=0):
-    str = ""
+    output_str = ""
 
     index = startInd
     while index < len(binstr):
@@ -41,14 +41,14 @@ def btos(binstr='', startInd=0):
         for bitno in range(8):
             num += (128 / 2 ** bitno) * (ord(binstr[index + bitno]) - 48)
 
-        str += chr(int(num))
+        output_str += chr(int(num))
         index += 8
         if not index < len(binstr):
             break
         if binstr[index] == ' ':
             index += 1
 
-    return str
+    return output_str
 
 
 def parseBin(binstr=""):
